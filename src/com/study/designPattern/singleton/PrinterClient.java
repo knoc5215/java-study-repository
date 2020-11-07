@@ -1,4 +1,4 @@
-package com.study.singleton;
+package com.study.designPattern.singleton;
 
 public class PrinterClient {
     public static final int USER_NUMBER = 10;

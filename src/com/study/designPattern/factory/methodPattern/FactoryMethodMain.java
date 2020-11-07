@@ -1,6 +1,6 @@
-package com.study.factory.methodPattern;
+package com.study.designPattern.factory.methodPattern;
 
-import com.study.factory.Suit.Suit;
+import com.study.designPattern.factory.Suit.Suit;
 
 public class FactoryMethodMain {
     /*

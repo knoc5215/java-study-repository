@@ -1,4 +1,4 @@
-package com.study.factory.Suit;
+package com.study.designPattern.factory.Suit;
 
 public class HydroSuit extends Suit {
 

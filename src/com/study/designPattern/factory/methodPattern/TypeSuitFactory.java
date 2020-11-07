@@ -1,6 +1,6 @@
-package com.study.factory.methodPattern;
+package com.study.designPattern.factory.methodPattern;
 
-import com.study.factory.Suit.*;
+import com.study.designPattern.factory.Suit.*;
 
 public class TypeSuitFactory extends SuitFactory {
     @Override
