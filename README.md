@@ -6,3 +6,4 @@
 
 # JAVA
 1. Call By Value vs Call By Reference
+2. 제네릭
