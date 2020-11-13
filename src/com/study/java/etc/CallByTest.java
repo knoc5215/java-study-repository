@@ -1,4 +1,4 @@
-package com.study.java;
+package com.study.java.etc;
 
 public class CallByTest {
     public static void main(String[] args) {
