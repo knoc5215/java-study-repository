@@ -5,5 +5,7 @@
 4. 객체지향 S.O.L.I.D 5원칙
 
 # JAVA
-1. Call By Value vs Call By Reference
-2. 제네릭
+1. etc
+   - Call By Value vs Call By Reference
+2. generic
+3. thread
