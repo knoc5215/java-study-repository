@@ -1,8 +1,8 @@
 package com.study.java.linkedList;
 
-public class LinkedList {
+public class LinkedList<T> {
     public static void main(String[] args) {
-        LinkedList linkedList = new LinkedList();
+        LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.insertNode(0);
         linkedList.insertNode(1);
         linkedList.insertNode(2);
@@ -35,18 +35,18 @@ public class LinkedList {
 
     }
 
-    private ListNode head;
+    private ListNode<T> head;
 
     public LinkedList() {
         this.head = null;
     }
 
-    public void insertNode(int data) {
-        ListNode newNode = new ListNode(data);
+    public void insertNode(T data) {
+        ListNode<T> newNode = new ListNode<>(data);
         if (head == null) {
             this.head = newNode;
         } else {
-            ListNode curNode = head;
+            ListNode<T> curNode = head;
             while (curNode.getNext() != null) {
                 curNode = curNode.getNext();
             }
@@ -54,16 +54,16 @@ public class LinkedList {
         }
     }
 
-    public void insertNode(ListNode preNode, int data) {
-        ListNode newNode = new ListNode(data);
+    public void insertNode(ListNode<T> preNode, T data) {
+        ListNode<T> newNode = new ListNode<>(data);
 
         newNode.setNext(preNode.getNext());
         preNode.setNext(newNode);
     }
 
-    public void deleteNode(int data) {
-        ListNode preNode = head;
-        ListNode nextNode = head.getNext();
+    public void deleteNode(T data) {
+        ListNode<T> preNode = head;
+        ListNode<T> nextNode = head.getNext();
 
         if (preNode.getData() == data) {
             head = preNode.getNext();
@@ -88,8 +88,8 @@ public class LinkedList {
     }
 
     public void deleteNode() {
-        ListNode preNode;
-        ListNode nextNode;
+        ListNode<T> preNode;
+        ListNode<T> nextNode;
 
         if (head == null) {
             return;
@@ -110,8 +110,8 @@ public class LinkedList {
         }
     }
 
-    public ListNode findNode(int data) {
-        ListNode nextNode = this.head;
+    public ListNode<T> findNode(T data) {
+        ListNode<T> nextNode = this.head;
 
         while (nextNode != null) {
             if (nextNode.getData() == data) {
@@ -125,7 +125,7 @@ public class LinkedList {
     }
 
     public void print() {
-        ListNode nextNode = this.head;
+        ListNode<T> nextNode = this.head;
         while (nextNode != null) {
             System.out.print(nextNode.getData() + " ");
             nextNode = nextNode.getNext();
@@ -136,34 +136,34 @@ public class LinkedList {
 
 }
 
-class ListNode {
-    private int data;
-    private ListNode next;
+class ListNode<T> {
+    private T data;
+    private ListNode<T> next;
 
 
-    public ListNode(int data, ListNode next) {
+    public ListNode(T data, ListNode<T> next) {
         this.data = data;
         this.next = next;
     }
 
-    public ListNode(int data) {
+    public ListNode(T data) {
         this.data = data;
         this.next = null;
     }
 
-    public int getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(T data) {
         this.data = data;
     }
 
-    public ListNode getNext() {
+    public ListNode<T> getNext() {
         return next;
     }
 
-    public void setNext(ListNode next) {
+    public void setNext(ListNode<T> next) {
         this.next = next;
     }
 }
